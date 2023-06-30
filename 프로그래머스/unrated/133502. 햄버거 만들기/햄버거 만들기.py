@@ -14,8 +14,4 @@ def solution(ingredient):
                 answer+=1
             
             
-   # ing=''.join(map(str,ingredient))
-    #while ing.find("1231")!=-1:
-    #    ing=ing.replace("1231",'',1)
-      #  answer+=1
     return answer
