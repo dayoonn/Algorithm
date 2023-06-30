@@ -1,9 +1,9 @@
 def solution(n, lost, reserve):
-    answer = n-len(lost)
+    answer = 0
     lost.sort()
     lo=[i for i in lost if i not in reserve]
     re=[i for i in reserve if i not in lost]
-    answer+=len(lost)-len(lo)
+    answer+=n-len(lo)
     for lostN in lo:
         if lostN-1 in re:
             re.remove(lostN-1)
