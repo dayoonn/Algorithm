@@ -24,9 +24,9 @@ class Solution {
             str=str.replace("02","11");
         
         }
-        str=str.replace("2002","1111");
-        str=str.replace("2020","1111");
-        str=str.replace("0202","1111");
+        // str=str.replace("2002","1111");
+        // str=str.replace("2020","1111");
+        // str=str.replace("0202","1111");
        
         
         
