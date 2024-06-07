@@ -4,20 +4,18 @@ import java.util.Collections.*;
 class Solution {
     public int solution(int k, int[] tangerine) {
         int answer = 0;
-        boolean[] visited=new boolean[10000001];
-        List<Integer> cnt= new ArrayList<>();
+       // boolean[] visited=new boolean[10000001];
         HashMap<Integer,Integer> map=new HashMap<>();
-        int index=0;
+        //int index=0;
         for(int i:tangerine){
-            if(!visited[i]){
-                map.put(i,index++);
-                visited[i]=true;
-                cnt.add(0);
-            }
-            int numIdx=map.get(i);
-            int before=cnt.get(numIdx);
-            cnt.set(numIdx,++before);
+            map.put(i, map.getOrDefault(i, 0) + 1);
         }
+        
+        List<Integer> cnt= new ArrayList<>();
+        for(Integer key:map.keySet()){
+            cnt.add(map.get(key));
+        }
+        
         Collections.sort(cnt, Collections.reverseOrder());
         int sum=0;
         for(int i=0;i<cnt.size();i++){
@@ -27,7 +25,7 @@ class Solution {
                 break;
             }
         }
-        
+       
         
         
         return answer;
