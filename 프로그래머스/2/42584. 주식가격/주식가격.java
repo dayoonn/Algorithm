@@ -12,7 +12,6 @@ class Solution {
         int min=prices[len-1];
         
         for(int i=len-2;i>=0;i--){
-            max=Math.max(max,prices[i]);
             if(min>=prices[i]){
                 for(int j=prices[i];j<=max;j++) answer[i]+=keep[j];
             }else{
@@ -21,6 +20,7 @@ class Solution {
                     answer[i]++;
                 }
             }
+            max=Math.max(max,prices[i]);
             min=Math.min(min,prices[i]);
             
             keep[prices[i]]++;
