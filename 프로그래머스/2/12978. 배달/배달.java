@@ -26,7 +26,7 @@ class Solution {
         distances[1] = 0;
 
         // BFS를 위한 우선순위 큐 (거리 기준 오름차순)
-        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[1]));
+        Queue<int[]> pq = new LinkedList<>();
         pq.add(new int[]{1, 0}); // 시작 노드
 
         while (!pq.isEmpty()) {
